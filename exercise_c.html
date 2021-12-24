@@ -1,1 +1,148 @@
 <!-- 3) Write the necessary html-css code for generating the below figure (using flex). -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* css here */
+
+.body {
+  padding: 2em;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+}
+.header {
+    padding: 20px;
+    margin: 5px;
+    flex: 1;
+    color: white;
+    background-color: aqua;
+    text-align: center;
+}
+
+.container-b {
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container-c {
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container-row-a {
+    width: 33%;
+    flex-direction: row;
+    margin:5px;
+}
+
+.container-row-b {
+    width: 67%;
+    flex-direction: row;
+    margin:5px;
+}
+
+.hero-item {
+    padding: 20px;
+    height: 200px;
+    flex:1;
+    color: white;
+    background-color: pink;
+    text-align: center;
+    margin:5px;
+}
+
+.sidebar-item {
+    padding: 20px;
+    height: 400px;
+    flex:1;
+    color: white;
+    background-color: green;
+    text-align: center;
+    margin:5px;
+}
+
+.main-item {
+    padding: 20px;
+    height: 400px;
+    flex: 1;
+    color: white;
+    background-color: rgba(255, 166, 0, 0.89);
+    margin:5px;
+}
+
+
+.extra-content-item {
+    padding: 20px;
+    height: 200px;
+    flex: 1;
+    color: white;
+    background-color: grey;
+    margin:5px;
+}
+
+.related-images {
+    padding: 20px;
+    height: 100px;
+    flex: 3 1 auto;
+    color: white;
+    background-color: green;
+    margin:5px;
+}
+
+.related-posts {
+    padding: 20px;
+    height: 100px;
+    flex: 1 1 auto;
+    color: white;
+    background-color: pink;
+    margin:5px;
+}
+
+.footer {
+    padding: 20px;
+    height: 100px;
+    flex: 1 1 auto;
+    color: white;
+    background-color: orange;
+    margin:5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        HEADER
+    </header>
+</div>
+
+<div class="container-b">
+    <div class="container-row-a">
+        <div class="hero-item"> Hero </div>
+        <div class="sidebar-item">Side Bar</div>
+    </div>
+    <div class="container-row-b">
+        <div class="main-item"> Main Content </div>
+        <div class="extra-content-item">Extra Content</div>
+    </div>
+</div>
+
+<div class="container-c">
+    <div class="related-images">Related Images</div>
+    <div class="related-posts">Related Posts</div>
+</div>
+<div class="footer">
+    <div>Footer</div>
+</div>
+
+</body>
+</html>
