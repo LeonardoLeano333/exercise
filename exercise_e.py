@@ -18,5 +18,33 @@
 
 def find_egg_break_height(eggs=2, max_floor=100, break_flor=60):
     botton_flor = 0
-    delta_floor = ""
-    pass
+    upper_flor = max_floor
+    current_flor = (upper_flor - botton_flor)//2 # 50
+    flor_that_do_not_break = botton_flor
+    while True:
+        if eggs > 1:
+            if current_flor >= break_flor:
+                eggs -= 1 #break the egg
+                print("egg breaked")
+                current_flor = botton_flor
+            else: #calculate
+                botton_flor = current_flor
+                upper_flor = current_flor + (upper_flor - current_flor)//2
+                current_flor = upper_flor
+        else:
+            current_flor+=1
+            if current_flor >= break_flor:
+                eggs -= 1 #break the egg
+                print("egg breaked")
+            if eggs < 1:
+                return current_flor -1
+
+
+if __name__ == "__main__":
+    print(find_egg_break_height(eggs=2, max_floor=100, break_flor=50)) # 49
+    print(find_egg_break_height(eggs=2, max_floor=100, break_flor=60)) # 49
+    print(find_egg_break_height(eggs=2, max_floor=100, break_flor=1)) # 0 
+    print(find_egg_break_height(eggs=2, max_floor=100, break_flor=0)) # 0
+    print(find_egg_break_height(eggs=2, max_floor=100, break_flor=5)) # 4
+    print(find_egg_break_height(eggs=2, max_floor=100, break_flor=70)) # 69
+    
