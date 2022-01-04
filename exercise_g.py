@@ -52,7 +52,7 @@ if __name__ == "__main__":
     # [{'kg': 5, 'price': 100, 'rate': 20.0, 'quantity': 0}, 
     # {'kg': 7, 'price': 150, 'rate': 21.428571428571427, 'quantity': 0},
     # {'kg': 3, 'price': 70, 'rate': 23.333333333333332, 'quantity': 12}]
-    carrot_types = [{"kg": 1, "price": 10}, {"kg": 7, "price": 150}, {"kg": 3, "price": 70}]
+    carrot_types = [{"kg": 5, "price": 100}, {"kg": 7, "price": 150}, {"kg": 3, "price": 70}]
     res = get_carrots_max_value(carrot_types, capacity=37)
     print(res)
     # res = \
@@ -67,3 +67,6 @@ if __name__ == "__main__":
 # anotter approach was Dijkstra for path optimization, but I could not adapt for this problem.
 # So instead of tring and failing to optimize I tackle it as the better sell price and add for
 # the vacant weight the lighter to fit.
+
+# Algorithm knapsack
+# bound less

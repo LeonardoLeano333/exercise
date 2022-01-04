@@ -31,3 +31,5 @@ if __name__ == "__main__":
     print( check_close_braces(qwe))
     print( check_close_braces(zxc))
     print( check_close_braces("{}}"))
+    print( check_close_braces("{asddwe}}"))
+    print( check_close_braces("{asddwe}"))

@@ -1,9 +1,19 @@
 import asyncio
+import time
 
-async def async_print(items):
-    for key, value  in enumerate(items):
-        await asyncio.sleep(key+1)
-        print(value)
+async def example(wait_time, value):
+    await asyncio.sleep(wait_time)
+    print(time.time())
+    print(value)
+
+async def run(items):
+    await asyncio.gather(*[example(2*items.index(item), item) for item in items])
+
+
+# async def async_print(items):
+#     for key, value  in enumerate(items):
+#         await asyncio.sleep(key+1)
+#         print(value)
 
 # Your code will actually print at 1,3,7,15 seconds from the beginning. can you make it print at 1,2,4,8 seconds? We are looking for concurrency.
 
@@ -13,3 +23,6 @@ async def async_print(items):
 # understand...
 # https://github.com/LeonardoLeano333/python_basics/blob/master/design_examples/multiprocessing_pool_example.py
 
+if __name__ == "__main__":
+    items = ["a","b","c","d"]
+    asyncio.run(run(items))
