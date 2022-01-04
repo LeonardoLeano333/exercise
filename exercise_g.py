@@ -59,3 +59,11 @@ if __name__ == "__main__":
     # [{'kg': 1, 'price': 10, 'rate': 10.0, 'quantity': 1},
     # {'kg': 7, 'price': 150, 'rate': 21.428571428571427, 'quantity': 0},
     # {'kg': 3, 'price': 70, 'rate': 23.333333333333332, 'quantity': 12}]
+
+
+# It is realy not optimized, I was studing some sort of algorithms:
+# my first approaches for this kind of problems were:
+# LSM, but i could not fegure it out how to adapt it
+# anotter approach was Dijkstra for path optimization, but I could not adapt for this problem.
+# So instead of tring and failing to optimize I tackle it as the better sell price and add for
+# the vacant weight the lighter to fit.

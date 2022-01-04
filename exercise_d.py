@@ -16,6 +16,8 @@ def check_close_braces(text, open_close_rules={"{":"}","[":"]","(":")"}):
             is_open = False
         elif is_open and char != close_rule and char in close_rules:
             return False
+        elif not is_open and char == close_rule: # added it here to solve "{}}"
+            return False
     if is_open:
         return False
     return True
@@ -28,3 +30,4 @@ if __name__ == "__main__":
     print( check_close_braces(asd))
     print( check_close_braces(qwe))
     print( check_close_braces(zxc))
+    print( check_close_braces("{}}"))

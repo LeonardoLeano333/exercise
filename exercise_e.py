@@ -42,9 +42,14 @@ def find_egg_break_height(eggs=2, max_floor=100, break_flor=60):
 
 if __name__ == "__main__":
     print(find_egg_break_height(eggs=2, max_floor=100, break_flor=50)) # 49
-    print(find_egg_break_height(eggs=2, max_floor=100, break_flor=60)) # 49
+    print(find_egg_break_height(eggs=2, max_floor=100, break_flor=60)) # 59
     print(find_egg_break_height(eggs=2, max_floor=100, break_flor=1)) # 0 
     print(find_egg_break_height(eggs=2, max_floor=100, break_flor=0)) # 0
     print(find_egg_break_height(eggs=2, max_floor=100, break_flor=5)) # 4
     print(find_egg_break_height(eggs=2, max_floor=100, break_flor=70)) # 69
-    
+
+# re ansering I had miss understood the question, in the question for me the 
+# question asked for the higher that the egg does not break if the egg breaks
+# at 50 the higher is not at 49 one level under 50? 
+# and yes, it is the worst case
+# Then, you have to try one by one from the first floor to 49th. That would make your worst case 50 drops.

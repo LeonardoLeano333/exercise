@@ -19,3 +19,6 @@ def zenos_achilles_n_tortoise(achilles_step=10, tortoise_step=1, max_iter=1000):
             break
 
     return (achilles_position, tortoise_position, achilles_positions, tortoise_positions)
+
+# I tried to deliver it the fastes as I could I'm sorry for not make it visual;
+# would use some kind of library as matplolib or plotly to make it;
